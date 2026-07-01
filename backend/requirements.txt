@@ -1,0 +1,41 @@
+# Oracle Fusion Security Administration Workbench — Python dependencies
+# Pin versions for reproducible builds; adjust minor versions as needed.
+
+# ── Web Framework ──────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# ── Data validation ────────────────────────────────────────────────────────
+pydantic==2.10.3
+pydantic-settings==2.6.1
+email-validator==2.2.0
+
+# ── Database ───────────────────────────────────────────────────────────────
+sqlalchemy==2.0.36
+alembic==1.14.0
+# SQL Server driver (comment out if using PostgreSQL)
+pyodbc==5.2.0
+# PostgreSQL driver (uncomment if using PostgreSQL)
+# psycopg2-binary==2.9.10
+
+# ── Async worker ───────────────────────────────────────────────────────────
+celery==5.4.0
+redis==5.2.1
+
+# ── HTTP client (Oracle Fusion API calls) ─────────────────────────────────
+httpx==0.28.1
+
+# ── File processing (bulk import) ─────────────────────────────────────────
+pandas==2.2.3
+openpyxl==3.1.5
+
+# ── Auth / JWT ─────────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.20
+
+# ── Logging ────────────────────────────────────────────────────────────────
+structlog==24.4.0
+
+# ── Dev / tooling (not installed in production) ────────────────────────────
+# Install with: pip install -r requirements-dev.txt
